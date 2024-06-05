@@ -9,66 +9,78 @@
   <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-<div></div> <!-- The background -->
-<div> <!-- Header section -->
- <img src="images/user.png" />
-</div>
+    <!-- The background -->
+    <div class="bg"></div> 
 
-<div class="main">
-  <!-- Logo image -->
-  <img class="logo" src="images/text.png" />
-  
-  <!-- Directory container -->
-  <div> 
-    <div> 
-      <div>Harry Potter</div> <!-- Every Harry Potter movie -->
-      <div>Season 1</div>
-      <div>Season 2</div>
-      <div>Season 3</div>
-      <div>Season 4</div>
-      <div>Season 5</div>
-      <div>Season 6</div>
-      <div>Season 7</div>
+    <!-- Header section -->
+    <div class="head"> 
+      <img class="user" src="images/user.png"  onClick="viewMy()" />
     </div>
-  </div>
 
-  <!-- Movies container -->
-  <div>
-    <div>
-      <div>
-        <img src="images/movie1.jpg" />
-        <div>Harry Potter and the Sorcerer's Stone</div>
+    <!-- Main content section -->
+    <div class="main">
+      <img class="logo" src="images/text.png" />
+      <div style="width: 90%; overflow: auto hidden; padding: 0px 5%">
+        <div class="directory">
+          <div>Harry Potter</div> <!-- Every Harry Potter movie -->
+          <div>Season 1</div>
+          <div>Season 2</div>
+          <div>Season 3</div>
+          <div>Season 4</div>
+          <div>Season 5</div>
+          <div>Season 6</div>
+          <div>Season 7</div>
+        </div>
       </div>
-      <div>
-        <img src="images/movie2.jpg" />
-        <div>Harry Potter and the Chamber of Secrets</div>
-      </div>
-      <div>
-        <img src="images/movie3.jpg" />
-        <div>Harry Potter and the Prisoner of Azkaban</div>
-      </div>
-      <div>
-        <img src="images/movie4.jpg" />
-        <div>Harry Potter and the Goblet of Fire</div>
-      </div>
-      <div>
-        <img src="images/movie5.jpg" />
-        <div>Harry Potter and the Order of the Phoenix</div>
-      </div>
-      <div>
-        <img src="images/movie6.jpg" />
-        <div>Harry Potter and the Half-Blood Prince</div>
-      </div>
-      <div>
-        <img src="images/movie7-1.jpg" />
-        <div>Harry Potter and the Deathly Hallows: Part 1</div>
-      </div>
-      <div>
-        <img src="images/movie7-2.jpg" />
-        <div>Harry Potter and the Deathly Hallows: Part 2</div>
+
+      <!-- Movies container -->
+      <div class="movies">
+        <div class="movies-container"> <!--Use div to separate the t picture and name of each movie into a box-->
+            <!-- Individual movie items, triggers choiceMovie([index]) function when clicked -->
+          <div>
+            <img src="images/movie1.jpg" />
+            <div class="movie-text">Harry Potter and the Sorcerer's Stone</div>
+          </div>
+          <div>
+            <img src="images/movie2.jpg" />
+            <div class="movie-text">
+              Harry Potter and the Chamber of Secrets
+            </div>
+          </div>
+          <div>
+            <img src="images/movie3.jpg" />
+            <div class="movie-text">
+              Harry Potter and the Prisoner of Azkaban
+            </div>
+          </div>
+          <div>
+            <img src="images/movie4.jpg" />
+            <div class="movie-text">Harry Potter and the Goblet of Fire</div>
+          </div>
+          <div>
+            <img src="images/movie5.jpg" />
+            <div class="movie-text">
+              Harry Potter and the Order of the Phoenix
+            </div>
+          </div>
+          <div>
+            <img src="images/movie6.jpg" />
+            <div class="movie-text">Harry Potter and the Half-Blood Prince</div>
+          </div>
+          <div>
+            <img src="images/movie7-1.jpg" />
+            <div class="movie-text">
+              Harry Potter and the Deathly Hallows: Part 1
+            </div>
+          </div>
+          <div>
+            <img src="images/movie7-2.jpg" />
+            <div class="movie-text">
+              Harry Potter and the Deathly Hallows: Part 2
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 </body>
 </html>
