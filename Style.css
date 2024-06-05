@@ -1,0 +1,112 @@
+/* Reset default margin of the body */
+body {
+  margin: 0;
+}
+
+/* Background styling */
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url(images/bg.jpg) no-repeat center / cover; /* Center and cover background image */
+  z-index: -1; /* Place behind other elements */
+}
+
+/* Header styling */
+.head {
+  width: 100%;
+  height: 88px;
+  background: rgba(5, 7, 7, 0.9); 
+}
+
+/* User info positioning in the header */
+.head .user {
+  position: absolute; 
+  top: 24px;
+  right: 62px;
+}
+
+/* Main content container */
+.main {
+  text-align: center;
+}
+
+/* Logo styling */
+.logo {
+  width: 602px;
+  max-width: 100%;
+}
+
+/* Directory styling */
+.directory {
+  margin: 0 auto; 
+  width: 1212px;
+  height: 52px;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 1); 
+  font-family: "Istok Web";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 52px;
+  letter-spacing: 0.15em;
+  color: rgba(236, 241, 242, 1); 
+}
+
+/* Directory item styling */
+.directory div {
+  display: inline-block;
+  margin: 0 20px; /* Spacing between items */
+}
+
+/* Selected directory item styling */
+.directory .selected {
+  font-family: "Istok Web";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.15em;
+  vertical-align: bottom;
+  color: #f4d800; /* Yellow color for selected item */
+}
+
+/* Movies container styling */
+.movies {
+  margin-top: 18px;
+  width: 100%;
+  background: rgba(5, 7, 7, 0.5); /* Semi-transparent dark background */
+  overflow: auto; /* Allow scrolling if needed */
+}
+
+/* Movies container inner content styling */
+.movies-container {
+  width: 1300px; 
+  margin: 0 auto;
+}
+
+/* Individual movie card styling */
+.main .movie {
+  width: 245px; 
+  border-radius: 20px; 
+  overflow: hidden; /* Hide overflowing content */
+  background: rgba(5, 7, 7, 1); 
+  display: inline-block; /* Display as inline block */
+  margin: 30px; 
+}
+
+/* Movie image styling */
+.main .movie img {
+  width: 100%; /* Set image width to fill the container */
+  height: 137px; /* Set image height */
+}
+
+.movie-text {
+  margin: 5px 17px;
+  font-family: Istok Web;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0.15em;
+  text-align: left; /* Left align text */
+  color: rgba(236, 241, 242, 1); 
+}
