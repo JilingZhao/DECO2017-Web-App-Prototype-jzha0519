@@ -110,3 +110,274 @@ body {
   text-align: left; /* Left align text */
   color: rgba(236, 241, 242, 1); 
 }
+
+/* Hide the popup by default, and make it cover the entire screen */
+.popup {
+display: none;
+position: fixed;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+}
+
+/* Hide the back button by default */
+.popup .backButton {
+display: none;
+}
+
+/* Set the width of the video to 100% of its container */
+.popup video {
+width: 100%;
+}
+
+/* Styling for the detail and collection sections within the popup */
+.my,
+.movieDetail {
+display: none;
+position: absolute;
+overflow: auto;
+width: 640px;
+height: 100%;
+background: rgba(9, 12, 12, 1);
+top: 0;
+right: 0;
+}
+
+/* Styling for the button section inside movie details */
+.movieDetail .buttons {
+width: 100%;
+height: 67px;
+background: rgba(33, 33, 33, 1);
+font-family: Istok Web;
+font-size: 24px;
+font-weight: 700;
+line-height: 67px;
+letter-spacing: 0.15em; /* Spacing between letters */
+text-align: left;
+color: rgba(236, 241, 242, 1);
+}
+
+/* Highlight the selected button in yellow */
+.buttons .selected {
+color: rgba(244, 216, 0, 1);
+}
+
+/* Styling for the film section */
+.film {
+padding: 0px 47px;
+position: relative;
+}
+
+/* Styling for the film title */
+.film .title {
+width: 455px;
+font-family: Istok Web;
+margin: 15px 0;
+font-size: 32px;
+font-weight: 700;
+line-height: 45px;
+letter-spacing: 0.1em;
+text-align: left;
+color: rgba(236, 241, 242, 1);
+}
+
+/* Position the add button in the film section */
+.film .button-add {
+position: absolute;
+right: 50px;
+top: 24px;
+width: 50px;
+height: 50px;
+}
+
+/* Styling for buttons in the film section */
+.film .button {
+display: inline-block;
+line-height: 30px;
+font-family: Istok Web;
+font-size: 18px;
+font-weight: 700;
+letter-spacing: 0.15em;
+padding: 0 20px;
+border-radius: 10px; /* Rounded corners */
+text-align: left;
+
+background: rgba(33, 33, 33, 1);
+color: rgba(236, 241, 242, 1);
+}
+
+/* Styling for the film introduction text */
+.film .introduce {
+padding: 40px 22px;
+font-family: Istok Web;
+font-size: 15px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0.15em;
+color: rgba(236, 241, 242, 1);
+}
+
+/* Styling for the rating section */
+.rating {
+color: rgba(236, 241, 242, 1);
+font-family: Istok Web;
+}
+
+/* Styling for the title in the rating section */
+.rating .title {
+margin-top: 24px;
+font-size: 28px;
+font-weight: 700;
+line-height: 45px;
+letter-spacing: 0.1em;
+text-align: center;
+}
+
+/* Styling for the score display in the rating section */
+.rating .score {
+margin-top: 24px;
+font-family: Istok Web;
+font-size: 80px;
+font-weight: 700;
+text-align: center;
+}
+
+/* Styling for the user's rating section */
+.rating .myRating {
+margin: 45px auto;
+width: 85.5%;
+height: 149px;
+
+background: #212121;
+border-radius: 30px;
+}
+
+/* Styling for the text in the user's rating section */
+.myRating .text {
+margin: 10px 30px;
+font-family: Istok Web;
+font-size: 24px;
+font-weight: 700;
+line-height: 45px;
+letter-spacing: 0.1em;
+}
+
+/* Container for the stars in the user's rating section */
+.myRating .stars {
+position: relative;
+width: 415px;
+height: 44px;
+margin: 0 auto;
+}
+
+/* Individual star in the user's rating section */
+.myRating .star {
+position: absolute;
+width: 100%;
+height: 100%;
+background: url(images/star.png);
+background-size: auto 100%;
+pointer-events: none; /* Disable pointer events */
+}
+
+/* Styling for the collections section */
+.collections {
+padding: 26px;
+}
+
+/* Styling for the text in the collections section */
+.my .text {
+margin: 45px 0 30px 40px;
+font-family: Istok Web;
+font-size: 36px;
+font-weight: 700;
+letter-spacing: 0.2em;
+color: rgba(236, 241, 242, 1);
+}
+
+/* Styling for individual movies in the collections section */
+.my .movie {
+position: relative;
+display: inline-block;
+margin: 15px 7px;
+width: 182px;
+height: 140px;
+border-radius: 20px; /* Rounded corners */
+overflow: hidden;
+}
+
+/* Styling for movie images in the collections section */
+.my .movieImg {
+width: 182px;
+}
+
+/* Styling for movie name in the collections section */
+.my .movie .name {
+left: 3px;
+top: 108px;
+position: absolute;
+width: 125px;
+height: 16px;
+font-family: "Istok Web";
+font-style: normal;
+font-weight: 700;
+font-size: 7.5px;
+letter-spacing: 0.15em;
+color: #ecf1f2;
+}
+
+/* Styling for movie time in the collections section */
+.my .movie .time {
+right: 0;
+top: 108px;
+position: absolute;
+font-family: "Istok Web";
+font-style: normal;
+font-weight: 700;
+font-size: 6px;
+line-height: 9px;
+letter-spacing: 0.15em;
+color: #ecf1f2;
+}
+
+/* Hide the input for movies in the collections section */
+.my .movie input {
+display: none;
+position: absolute;
+left: 13px;
+top: 11px;
+border-radius: 10px;
+width: 19px;
+height: 19px;
+background: #050707;
+}
+
+/* Styling for buttons in the collections section */
+.my .buttons {
+display: none;
+text-align: center;
+padding: 0 5%;
+}
+
+/* General button styling in the collections section */
+.my button {
+padding: 8px 13px;
+background: #212121;
+border: 0;
+border-radius: 10px;
+font-family: Istok Web;
+font-size: 18px;
+font-weight: 700;
+letter-spacing: 0.15em;
+color: rgba(255, 255, 255, 1);
+}
+
+/* Styling for the edit button in the collections section */
+.my .edit-button {
+position: relative;
+padding: 10px 26px;
+left: 479px;
+font-family: Istok Web;
+font-size: 22px;
+}
