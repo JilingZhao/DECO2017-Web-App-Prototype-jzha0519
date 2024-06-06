@@ -22,14 +22,15 @@
       <img class="logo" src="images/text.png" />
       <div style="width: 90%; overflow: auto hidden; padding: 0px 5%">
         <div class="directory">
-          <div>Harry Potter</div> <!-- Every Harry Potter movie -->
-          <div>Season 1</div>
-          <div>Season 2</div>
-          <div>Season 3</div>
-          <div>Season 4</div>
-          <div>Season 5</div>
-          <div>Season 6</div>
-          <div>Season 7</div>
+          <!-- Directory items for filtering movies by season, triggers filter(event, [season]) function when clicked -->
+          <div class="selected" onClick="filter(event)">Harry Potter</div> <!-- Every Harry Potter movie -->
+          <div onClick="filter(event, 1)">Season 1</div>
+          <div onClick="filter(event, 2)">Season 2</div>
+          <div onClick="filter(event, 3)">Season 3</div>
+          <div onClick="filter(event, 4)">Season 4</div>
+          <div onClick="filter(event, 5)">Season 5</div>
+          <div onClick="filter(event, 6)">Season 6</div>
+          <div onClick="filter(event, 7)">Season 7</div>
         </div>
       </div>
 
@@ -37,43 +38,43 @@
       <div class="movies">
         <div class="movies-container"> <!--Use div to separate the t picture and name of each movie into a box-->
             <!-- Individual movie items, triggers choiceMovie([index]) function when clicked -->
-          <div>
+          <div class="movie season1" onClick="choiceMovie(0)">
             <img src="images/movie1.jpg" />
             <div class="movie-text">Harry Potter and the Sorcerer's Stone</div>
           </div>
-          <div>
+          <div class="movie season2" onClick="choiceMovie(1)">
             <img src="images/movie2.jpg" />
             <div class="movie-text">
               Harry Potter and the Chamber of Secrets
             </div>
           </div>
-          <div>
+          <div class="movie season3" onClick="choiceMovie(2)">
             <img src="images/movie3.jpg" />
             <div class="movie-text">
               Harry Potter and the Prisoner of Azkaban
             </div>
           </div>
-          <div>
+          <div class="movie season4" onClick="choiceMovie(3)">
             <img src="images/movie4.jpg" />
             <div class="movie-text">Harry Potter and the Goblet of Fire</div>
           </div>
-          <div>
+          <div class="movie season5" onClick="choiceMovie(4)">
             <img src="images/movie5.jpg" />
             <div class="movie-text">
               Harry Potter and the Order of the Phoenix
             </div>
           </div>
-          <div>
+          <div class="movie season6" onClick="choiceMovie(5)">
             <img src="images/movie6.jpg" />
             <div class="movie-text">Harry Potter and the Half-Blood Prince</div>
           </div>
-          <div>
+          <div class="movie season7" onClick="choiceMovie(6)">
             <img src="images/movie7-1.jpg" />
             <div class="movie-text">
               Harry Potter and the Deathly Hallows: Part 1
             </div>
           </div>
-          <div>
+          <div class="movie season7" onClick="choiceMovie(7)">
             <img src="images/movie7-2.jpg" />
             <div class="movie-text">
               Harry Potter and the Deathly Hallows: Part 2
@@ -82,71 +83,137 @@
         </div>
       </div>
     </div>
-
-    <div>
-    <div>
-     <svg>
+    
+    <!-- Popup container -->
+    <div class="popup">
+      <!-- Close popup by clicking anywhere in this area -->
+      <div class="closePopup" onClick="hidePopup()" style="height: 100%"></div>
+      <!-- Movie details container -->
+      <div class="movieDetail">
+        <!-- Back button to hide popup -->
+        <svg
+          class="backButton"
+          onClick="hidePopup()"
+          width="29"
+          height="29"
+          viewBox="0 0 29 29"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
             d="M12.4397 23.8225C12.9151 24.2909 13.6802 24.2852 14.1485 23.8098C14.6169 23.3345 14.6112 22.5695 14.1358 22.1011L7.6467 15.7074H24.1661C24.8333 15.7074 25.3744 15.1663 25.3744 14.499C25.3744 13.8317 24.8333 13.2907 24.1661 13.2907H7.65469L14.1358 6.90475C14.6112 6.43638 14.6169 5.67132 14.1485 5.19595C13.6802 4.72059 12.9151 4.71493 12.4397 5.1833L4.07301 13.427C3.47257 14.0186 3.47257 14.9872 4.07301 15.5788L12.4397 23.8225Z"
             fill="#ECF1F2"
           />
         </svg>
-      <video controls></video>
-      <div>
-        <span
-          >FILM</span
-        >
-        <span
-          >RATING</span
-        >
-      </div>
-      <div>
-        <svg>
-          <path
-            d="M25 0.833332C38.3467 0.833332 49.1666 11.6531 49.1666 25C49.1666 38.3468 38.3467 49.1667 25 49.1667C11.6531 49.1667 0.833313 38.3468 0.833313 25C0.833313 11.6531 11.6531 0.833332 25 0.833332ZM25 12.9167C24.0824 12.9167 23.324 13.5985 23.2039 14.4832L23.1875 14.7292V23.1875H14.7291C13.7281 23.1875 12.9166 23.999 12.9166 25C12.9166 25.9176 13.5985 26.676 14.4832 26.7961L14.7291 26.8125H23.1875V35.2708C23.1875 36.2718 23.999 37.0833 25 37.0833C25.9176 37.0833 26.6759 36.4013 26.796 35.5168L26.8125 35.2708V26.8125H35.2708C36.2718 26.8125 37.0833 26.001 37.0833 25C37.0833 24.0824 36.4013 23.324 35.5168 23.2039L35.2708 23.1875H26.8125V14.7292C26.8125 13.7282 26.001 12.9167 25 12.9167Z"
-            fill="#ECF1F2"
-          />
-        </svg>
-        <div>
-          View Movie
+
+        <!-- Video player for movie trailer or content -->
+        <video controls></video>
+
+        <!-- Buttons to toggle between film details and rating -->
+        <div class="buttons">
+          <span
+            onclick="selectFilm()"
+            id="filmButton"
+            class="selected"
+            style="margin-left: 50px"
+            >FILM</span
+          >
+          <span
+            onclick="selectRating()"
+            id="ratingButton"
+            style="margin-left: 20px"
+            >RATING</span
+          >
         </div>
-      </div>
-      <div>
-        <div>Audience Recommendation Score</div>
-        <div>9.5</div>
-        <div>
-          <div>My Rating</div>
-          <div>
+
+        <!-- Film details section -->
+        <div class="film">
+          <div class="title"></div>
+          <!-- Button to add film to collection -->
+          <svg
+            class="button-add"
+            onclick="addFilm()"
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M25 0.833332C38.3467 0.833332 49.1666 11.6531 49.1666 25C49.1666 38.3468 38.3467 49.1667 25 49.1667C11.6531 49.1667 0.833313 38.3468 0.833313 25C0.833313 11.6531 11.6531 0.833332 25 0.833332ZM25 12.9167C24.0824 12.9167 23.324 13.5985 23.2039 14.4832L23.1875 14.7292V23.1875H14.7291C13.7281 23.1875 12.9166 23.999 12.9166 25C12.9166 25.9176 13.5985 26.676 14.4832 26.7961L14.7291 26.8125H23.1875V35.2708C23.1875 36.2718 23.999 37.0833 25 37.0833C25.9176 37.0833 26.6759 36.4013 26.796 35.5168L26.8125 35.2708V26.8125H35.2708C36.2718 26.8125 37.0833 26.001 37.0833 25C37.0833 24.0824 36.4013 23.324 35.5168 23.2039L35.2708 23.1875H26.8125V14.7292C26.8125 13.7282 26.001 12.9167 25 12.9167Z"
+              fill="#ECF1F2"
+            />
+          </svg>
+          <div class="button score"></div>
+          <div class="button duration"></div>
+          <!-- Button to view the selected movie -->
+          <div onclick="viewMy()" class="button" style="float: right">
+            View Movie
+          </div>
+          <div class="introduce"></div>
+        </div>
+
+        <!-- Rating details section -->
+        <div class="rating">
+          <div class="title">Audience Recommendation Score</div>
+          <div class="score">9.5</div>
+          <div class="myRating">
+            <div class="text">My Rating</div>
+            <div class="stars" onclick="setScore(event)">
+              <div class="star"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div>
-      <svg>
-        <path
-          d="M12.4397 23.8225C12.9151 24.2909 13.6802 24.2852 14.1485 23.8098C14.6169 23.3345 14.6112 22.5695 14.1358 22.1011L7.6467 15.7074H24.1661C24.8333 15.7074 25.3744 15.1663 25.3744 14.499C25.3744 13.8317 24.8333 13.2907 24.1661 13.2907H7.65469L14.1358 6.90475C14.6112 6.43638 14.6169 5.67132 14.1485 5.19595C13.6802 4.72059 12.9151 4.71493 12.4397 5.1833L4.07301 13.427C3.47257 14.0186 3.47257 14.9872 4.07301 15.5788L12.4397 23.8225Z"
-          fill="#ECF1F2"
-        />
-      </svg>
 
-      <div>Collections</div>
-      <button>
-        Edit<svg>
+      <!-- My Collection section -->
+      <div class="my">
+        <!-- Back button to hide popup -->
+        <svg
+          class="backButton"
+          onClick="hidePopup()"
+          width="29"
+          height="29"
+          viewBox="0 0 29 29"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
-            d="M11.2562 2.15848C12.246 1.16851 13.8509 1.16846 14.8409 2.15837C15.8307 3.1482 15.8307 4.75302 14.841 5.7429L14.2095 6.37441C15.1053 7.27373 15.1042 8.72886 14.2062 9.62674L12.943 10.89C12.7355 11.0975 12.3992 11.0975 12.1917 10.89C11.9843 10.6825 11.9843 10.3462 12.1917 10.1387L13.455 8.87548C13.9379 8.39247 13.939 7.61011 13.4583 7.12576L6.37631 14.2085C6.08841 14.4965 5.72625 14.6989 5.33015 14.7932L2.07093 15.5692C1.89147 15.6119 1.70269 15.5585 1.57223 15.4281C1.44179 15.2976 1.38836 15.1088 1.43108 14.9293L2.20713 11.67C2.3014 11.274 2.5037 10.9119 2.79152 10.6241L11.2562 2.15848Z"
+            d="M12.4397 23.8225C12.9151 24.2909 13.6802 24.2852 14.1485 23.8098C14.6169 23.3345 14.6112 22.5695 14.1358 22.1011L7.6467 15.7074H24.1661C24.8333 15.7074 25.3744 15.1663 25.3744 14.499C25.3744 13.8317 24.8333 13.2907 24.1661 13.2907H7.65469L14.1358 6.90475C14.6112 6.43638 14.6169 5.67132 14.1485 5.19595C13.6802 4.72059 12.9151 4.71493 12.4397 5.1833L4.07301 13.427C3.47257 14.0186 3.47257 14.9872 4.07301 15.5788L12.4397 23.8225Z"
             fill="#ECF1F2"
           />
         </svg>
-      </button>
-      <div>
-        <button>All</button>
-        <button>
-          Delete
+
+        <div class="text">Collections</div>
+         <!-- Edit button to edit collection -->
+        <button onclick="edit()" class="edit-button">
+          Edit<svg
+            width="17"
+            height="17"
+            viewBox="0 0 17 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11.2562 2.15848C12.246 1.16851 13.8509 1.16846 14.8409 2.15837C15.8307 3.1482 15.8307 4.75302 14.841 5.7429L14.2095 6.37441C15.1053 7.27373 15.1042 8.72886 14.2062 9.62674L12.943 10.89C12.7355 11.0975 12.3992 11.0975 12.1917 10.89C11.9843 10.6825 11.9843 10.3462 12.1917 10.1387L13.455 8.87548C13.9379 8.39247 13.939 7.61011 13.4583 7.12576L6.37631 14.2085C6.08841 14.4965 5.72625 14.6989 5.33015 14.7932L2.07093 15.5692C1.89147 15.6119 1.70269 15.5585 1.57223 15.4281C1.44179 15.2976 1.38836 15.1088 1.43108 14.9293L2.20713 11.67C2.3014 11.274 2.5037 10.9119 2.79152 10.6241L11.2562 2.15848Z"
+              fill="#ECF1F2"
+            />
+          </svg>
         </button>
-        <button>Cancel</button>
+        <!-- Buttons for managing collection -->
+        <div class="buttons">
+          <button onclick="checkAll()">All</button>
+          <button
+            onclick="deleteMovie()"
+            style="background: rgba(244, 216, 0, 1); color: rgba(5, 7, 7, 1)"
+          >
+            Delete
+          </button>
+          <button onclick="cancel()" style="float: right">Cancel</button>
+        </div>
+        <!-- Container for displaying collection items -->
+        <div class="collections"></div>
       </div>
-      <div></div>
     </div>
-  </div>
 </body>
 </html>
