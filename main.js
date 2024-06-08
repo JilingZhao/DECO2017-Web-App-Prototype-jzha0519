@@ -181,6 +181,7 @@ function viewMy() {
   document.querySelector(".movieDetail").style.display = "none";   // Hide the movie detail section
   document.querySelector(".my").style.display = "block"; // Show the "my" section
   document.querySelector(".my .collections").innerHTML = ""; // Clear the contents of the collections element
+  
   // Iterate over each movie in the list
   for (const movie of list) { 
     // Add the movie details to the collections element
@@ -256,6 +257,7 @@ function setScore(event) {
   const score = Math.ceil(
     (event.offsetX / event.target.clientWidth) * 10
   );
+
   // Display the calculated score
   document.querySelector(".rating .score").innerText = score;
    // The width of the star rating bar based on the score
