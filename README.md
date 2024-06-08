@@ -6,7 +6,7 @@ Harry Potter is a simple single page application (SPA) specifically designed to 
 
 ### Version control
 
-This project uses git and github for tracking changes and managing development. Please see the github repository here: [URl to github repo]
+This project uses git and github for tracking changes and managing development. Please see the github repository here: https://github.com/JilingZhao/DECO2017-Web-App-Prototype-jzha0519.git.
 
 ## Features
 
@@ -29,8 +29,9 @@ No setup is required.
 ## Usage
 
 There are two options:
-1.View the website online at the following URL:
+1.View the website online at the following URL: http://localhost:1234
 2.Open the index.html file in your web browser to start using the application.
+
 
 When the page opens, you can browse the movies about Harry Potter in this website. If you meet the Harry Potter series of favorite movies can also be collected and rated, click on the user's avatar, you can view the added movie in the collection. When users want to remove a movie from their collection, they can delete it by clicking Edit. In deleting movies, there are single and all selection functions.
 
